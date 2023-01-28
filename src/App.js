@@ -27,8 +27,7 @@ export default class App extends React.Component {
       subject: "",
       from: "",
       to: "",
-    }]
-    
+    }]    
 }
 
   render() {
