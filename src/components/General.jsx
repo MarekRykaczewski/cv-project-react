@@ -11,6 +11,7 @@ export default class General extends React.Component {
 
         return (
             <div>
+                <h3> Personal Details </h3>
                 {inputElements}
             </div>
         )
