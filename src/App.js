@@ -30,8 +30,12 @@ export default class App extends React.Component {
         <nav> CV Maker </nav>
         <main> 
         <FormSection 
-          title="Title"
+          title="Personal Details"
           info={this.state.general}
+        />
+        <FormSection 
+          title="Experience"
+          info={this.state.experience[0]}
         />
         </main>
         <footer> Marek Rykaczewski </footer>
