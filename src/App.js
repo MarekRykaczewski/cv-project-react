@@ -20,6 +20,13 @@ export default class App extends React.Component {
       location: "",
       from: "",
       to: ""
+    }],
+    education: [{
+      institution: "",
+      degree: "",
+      subject: "",
+      from: "",
+      to: "",
     }]
     
 }
