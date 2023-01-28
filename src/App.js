@@ -43,10 +43,12 @@ export default class App extends React.Component {
         <FormSection 
           title="Experience"
           info={this.state.experience[0]}
+          allowMultiple={true}
         />
         <FormSection 
           title="Education"
           info={this.state.education[0]}
+          allowMultiple={true}
         />
         </main>
         <footer> Marek Rykaczewski </footer>
