@@ -44,6 +44,10 @@ export default class App extends React.Component {
           title="Experience"
           info={this.state.experience[0]}
         />
+        <FormSection 
+          title="Education"
+          info={this.state.education[0]}
+        />
         </main>
         <footer> Marek Rykaczewski </footer>
       </div>
