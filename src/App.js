@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Experience from './components/Experience';
+import FormSection from './components/FormSection';
 import General from './components/General.jsx'
 
 export default class App extends React.Component {
@@ -30,11 +31,9 @@ export default class App extends React.Component {
       <div className="App">
         <nav> CV Maker </nav>
         <main> 
-        <General 
+        <FormSection 
+          title="Title"
           info={this.state.general}
-        />
-        <Experience
-          info={this.state.experience[0]}
         />
         </main>
         <footer> Marek Rykaczewski </footer>
