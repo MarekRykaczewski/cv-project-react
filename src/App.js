@@ -15,13 +15,14 @@ export default class App extends React.Component {
       phone: "",
       description: ""
     },
-    experience: {
+    experience: [{
       position: "",
       company: "",
       location: "",
       from: "",
       to: ""
-    }
+    }]
+    
 }
 
   render() {
@@ -33,7 +34,7 @@ export default class App extends React.Component {
           info={this.state.general}
         />
         <Experience
-          info={this.state.experience}
+          info={this.state.experience[0]}
         />
         </main>
         <footer> Marek Rykaczewski </footer>
