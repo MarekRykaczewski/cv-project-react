@@ -1,13 +1,32 @@
+import React from 'react';
 import './App.css';
+import General from './components/General.jsx'
 
-function App() {
-  return (
-    <div className="App">
-      <nav> CV Maker </nav>
-      <main> Main </main>
-      <footer> Marek Rykaczewski </footer>
-    </div>
-  );
+export default class App extends React.Component {
+
+  state = {
+    general: {
+      firstName: "",
+      lastName: "",
+      title: "",
+      photo: "",
+      email: "",
+      phone: "",
+      description: ""
+    }
 }
 
-export default App;
+  render() {
+    return (
+      <div className="App">
+        <nav> CV Maker </nav>
+        <main> 
+        <General 
+          info={this.state.general}
+        />
+        </main>
+        <footer> Marek Rykaczewski </footer>
+      </div>
+    )
+  }
+}
