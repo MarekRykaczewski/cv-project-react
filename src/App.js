@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Experience from './components/Experience';
 import General from './components/General.jsx'
 
 export default class App extends React.Component {
@@ -13,6 +14,13 @@ export default class App extends React.Component {
       email: "",
       phone: "",
       description: ""
+    },
+    experience: {
+      position: "",
+      company: "",
+      location: "",
+      from: "",
+      to: ""
     }
 }
 
@@ -23,6 +31,9 @@ export default class App extends React.Component {
         <main> 
         <General 
           info={this.state.general}
+        />
+        <Experience
+          info={this.state.experience}
         />
         </main>
         <footer> Marek Rykaczewski </footer>
