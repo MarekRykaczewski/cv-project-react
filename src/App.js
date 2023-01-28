@@ -1,8 +1,6 @@
 import React from 'react';
 import './App.css';
-import Experience from './components/Experience';
 import FormSection from './components/FormSection';
-import General from './components/General.jsx'
 
 export default class App extends React.Component {
 
