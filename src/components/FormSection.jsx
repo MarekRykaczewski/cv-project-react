@@ -13,7 +13,7 @@ export default class FormSection extends React.Component {
             <div>
                 <h3> {this.props.title} </h3>
                 {formElements}
-                {this.props.allowMultiple && <button> Add </button>}
+                {this.props.allowMultiple && <button onClick={this.props.handleAddClick}> Add </button>}
             </div>
         )
     }
