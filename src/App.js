@@ -35,7 +35,6 @@ addComponentObject = (stateName) => {
     [stateName]: 
       [...this.state[stateName], {...this.state[stateName][0]}]
   })
-  console.log(this.state)
 }
 
 renderAll = (stateName) => {
