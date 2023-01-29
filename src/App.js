@@ -30,11 +30,12 @@ export default class App extends React.Component {
     }]    
 }
 
-addComponentObject = (stateName, stateObject) => {
+addComponentObject = (stateName) => {
   this.setState({
     [stateName]: 
-      [...stateObject, {...stateObject[0]}]
+      [...this.state[stateName], {...this.state[stateName][0]}]
   })
+  console.log(this.state)
 }
 
 renderAll = (stateName) => {
@@ -45,7 +46,7 @@ renderAll = (stateName) => {
         title={stateName}
         info={this.state[stateName][i]}
         allowMultiple={true}
-        handleAddClick={() => this.addComponentObject(stateName, this.state[stateName])}
+        handleAddClick={() => this.addComponentObject(stateName)}
       />
       )
   }
