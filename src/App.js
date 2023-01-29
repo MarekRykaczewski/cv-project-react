@@ -37,6 +37,21 @@ addComponentObject = (stateName, stateObject) => {
   })
 }
 
+renderAll = (stateName) => {
+  let elements = []
+  for (let i = 0; i < this.state[stateName].length ; i++) {
+      elements.push(
+        <FormSection
+        title={stateName}
+        info={this.state[stateName][i]}
+        allowMultiple={true}
+        handleAddClick={() => this.addComponentObject(stateName, this.state[stateName])}
+      />
+      )
+  }
+  return elements
+}
+
   render() {
     return (
       <div className="App">
@@ -46,18 +61,8 @@ addComponentObject = (stateName, stateObject) => {
           title="Personal Details"
           info={this.state.general}
         />
-        <FormSection 
-          title="Experience"
-          info={this.state.experience[0]}
-          allowMultiple={true}
-          handleAddClick={() => this.addComponentObject("experience", this.state.experience)}
-        />
-        <FormSection 
-          title="Education"
-          info={this.state.education[0]}
-          allowMultiple={true}
-          handleAddClick={() => this.addComponentObject("experience", this.state.experience)}
-        />
+        {this.renderAll("experience")}
+        {this.renderAll("education")}
         </main>
         <footer> Marek Rykaczewski </footer>
       </div>
