@@ -30,7 +30,7 @@ export default class App extends React.Component {
     }]    
 }
 
-addComponent = (stateName, stateObject) => {
+addComponentObject = (stateName, stateObject) => {
   this.setState({
     [stateName]: 
       [...stateObject, {...stateObject[0]}]
@@ -50,13 +50,13 @@ addComponent = (stateName, stateObject) => {
           title="Experience"
           info={this.state.experience[0]}
           allowMultiple={true}
-          handleAddClick={() => this.addComponent("experience", this.state.experience)}
+          handleAddClick={() => this.addComponentObject("experience", this.state.experience)}
         />
         <FormSection 
           title="Education"
           info={this.state.education[0]}
           allowMultiple={true}
-          handleAddClick={() => this.addComponent("experience", this.state.experience)}
+          handleAddClick={() => this.addComponentObject("experience", this.state.experience)}
         />
         </main>
         <footer> Marek Rykaczewski </footer>
