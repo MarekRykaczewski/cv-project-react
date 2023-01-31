@@ -1,4 +1,5 @@
 import React from 'react';
+import uniqid from 'uniqid';
 import './App.css';
 import FormSection from './components/FormSection';
 
@@ -15,6 +16,7 @@ export default class App extends React.Component {
       description: ""
     },
     experience: [{
+      id: uniqid(),
       position: "",
       company: "",
       location: "",
@@ -22,6 +24,7 @@ export default class App extends React.Component {
       to: ""
     }],
     education: [{
+      id: uniqid(),
       institution: "",
       degree: "",
       subject: "",
