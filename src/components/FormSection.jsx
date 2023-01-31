@@ -4,9 +4,11 @@ export default class FormSection extends React.Component {
 
     render() {
         const formElements = Object.keys(this.props.info).map((prop, i) => {
-            return (
-                <input type="text" placeholder={prop} key={i}></input>
-            )
+            if (!(prop === "id")) {
+                return (
+                    <input type="text" placeholder={prop} key={i}></input>
+                )
+            }
         })
 
         return (
