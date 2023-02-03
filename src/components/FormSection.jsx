@@ -8,6 +8,8 @@ export default class FormSection extends React.Component {
                 return (
                     <input type="text" name={prop} onChange={this.props.handleChange} placeholder={prop} key={i}></input>
                 )
+            } else {
+                return false
             }
         })
 
