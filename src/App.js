@@ -5,6 +5,34 @@ import FormSection from './components/FormSection';
 
 export default class App extends React.Component {
 
+  STATE_TEMPLATE = {
+    general: {
+      firstName: "",
+      lastName: "",
+      title: "",
+      photo: "",
+      email: "",
+      phone: "",
+      description: ""
+    },
+    experience: [{
+      id: "",
+      position: "",
+      company: "",
+      location: "",
+      from: "",
+      to: ""
+    }],
+    education: [{
+      id: "",
+      institution: "",
+      degree: "",
+      subject: "",
+      from: "",
+      to: "",
+    }]   
+  }
+
   state = {
     general: {
       firstName: "",
@@ -46,7 +74,7 @@ removeComponentObject = (stateName, id) => {
 addComponentObject = (stateName) => {
   this.setState({
     [stateName]: 
-      [...this.state[stateName], {...this.state[stateName][0]}]
+      [...this.state[stateName], {...this.STATE_TEMPLATE[stateName][0], id: uniqid()}]
   })
 }
 
