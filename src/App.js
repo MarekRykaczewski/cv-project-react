@@ -2,6 +2,7 @@ import React from 'react';
 import uniqid from 'uniqid';
 import './App.css';
 import FormSection from './components/FormSection';
+import Preview from './components/Preview';
 
 export default class App extends React.Component {
 
@@ -99,12 +100,15 @@ renderAll = (stateName) => {
       <div className="App">
         <nav> CV Maker </nav>
         <main> 
+        <div>
         <FormSection 
           title="Personal Details"
           info={this.state.general}
         />
         {this.renderAll("experience")}
         {this.renderAll("education")}
+        </div>
+        <Preview />
         </main>
         <footer> Marek Rykaczewski </footer>
       </div>
