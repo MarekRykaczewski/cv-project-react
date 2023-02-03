@@ -14,7 +14,7 @@ export default class FormSection extends React.Component {
         })
 
         return (
-            <div>
+            <div className="form-section">
                 <h3> {this.props.title} </h3>
                 {formElements}
                 {this.props.allowMultiple && <button onClick={this.props.handleAddClick}> Add </button>}
