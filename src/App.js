@@ -98,6 +98,7 @@ renderAll = (stateName) => {
   for (let i = 0; i < this.state[stateName].length ; i++) {
       elements.push(
         <FormSection
+        key={i}
         title={stateName}
         info={this.state[stateName][i]}
         allowMultiple={true}
