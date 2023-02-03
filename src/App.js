@@ -50,6 +50,21 @@ addComponentObject = (stateName) => {
   })
 }
 
+handleChange = (stateName, id) => (event) => {
+  const { name, value } = event.target
+  let updated = this.state[stateName].map(item => {
+    if (item.id === id) {
+      return {...item, [name]: value};
+    }
+    return item
+  })
+  console.log(this.state)
+  this.setState({
+  [stateName]:
+    updated
+  })
+}
+
 renderAll = (stateName) => {
   let elements = []
   for (let i = 0; i < this.state[stateName].length ; i++) {
@@ -60,6 +75,7 @@ renderAll = (stateName) => {
         allowMultiple={true}
         handleAddClick={() => this.addComponentObject(stateName)}
         handleDeleteClick={() => this.removeComponentObject(stateName, this.state[stateName][i].id)}
+        handleChange={this.handleChange(stateName, this.state[stateName][i].id)}
       />
       )
   }

@@ -6,7 +6,7 @@ export default class FormSection extends React.Component {
         const formElements = Object.keys(this.props.info).map((prop, i) => {
             if (!(prop === "id")) {
                 return (
-                    <input type="text" placeholder={prop} key={i}></input>
+                    <input type="text" name={prop} onChange={this.props.handleChange} placeholder={prop} key={i}></input>
                 )
             }
         })
