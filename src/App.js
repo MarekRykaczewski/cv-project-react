@@ -35,29 +35,13 @@ export default class App extends React.Component {
 
   state = {
     general: {
-      firstName: "",
-      lastName: "",
-      title: "",
-      photo: "",
-      email: "",
-      phone: "",
-      description: ""
+      ...[this.STATE_TEMPLATE.general][0]
     },
     experience: [{
-      id: uniqid(),
-      position: "",
-      company: "",
-      location: "",
-      from: "",
-      to: ""
+      ...this.STATE_TEMPLATE.experience[0], id: uniqid()
     }],
     education: [{
-      id: uniqid(),
-      institution: "",
-      degree: "",
-      subject: "",
-      from: "",
-      to: "",
+      ...this.STATE_TEMPLATE.education[0], id: uniqid()
     }]    
 }
 
