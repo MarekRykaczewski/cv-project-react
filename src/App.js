@@ -63,7 +63,6 @@ export default class App extends React.Component {
 
 removeComponentObject = (stateName, id) => {
   let filtered = this.state[stateName].filter(prop => prop.id !== id)
-  console.log(filtered)
   this.setState({
     [stateName]:
     filtered
@@ -98,7 +97,7 @@ renderAll = (stateName) => {
   for (let i = 0; i < this.state[stateName].length ; i++) {
       elements.push(
         <FormSection
-        key={i}
+        key={this.state[stateName][i].id} // !!! This lets props update on state change !!!
         title={stateName}
         info={this.state[stateName][i]}
         allowMultiple={true}
