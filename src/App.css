@@ -48,9 +48,16 @@ main {
 .preview--person {
     padding: 20px;
     display: grid;
-    grid-template-rows: 20px 20px 20px;
+    grid-template-rows: 30px 30px auto;
     font-weight: bold;
     font-size: 24px;
+}
+
+.preview--person--image {
+    width: 180px;
+    height: auto;
+    align-self: center;
+    justify-self: center;
 }
 
 .preview--personal-info {
