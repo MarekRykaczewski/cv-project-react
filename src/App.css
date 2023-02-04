@@ -6,8 +6,28 @@ body {
 main {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: flex-start;
 }
 
 .form-section {
-    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 500px;
+}
+
+.preview {
+    border: 1px solid black;
+    min-width: 700px;
+    min-height: 900px;
+}
+
+.main--left {
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid black;
 }
