@@ -125,13 +125,7 @@ renderAll = (stateName) => {
         {this.renderAll("education")}
         </div>
         <Preview 
-        firstName={generalDefault.firstName}
-        lastName={generalDefault.lastName}
-        title={generalDefault.title}
-        photo={generalDefault.photo}
-        email={generalDefault.email}
-        phone={generalDefault.phone}
-        description={generalDefault.description}
+        general={generalDefault}
         />
         </main>
         <footer> Marek Rykaczewski </footer>
