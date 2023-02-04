@@ -79,6 +79,17 @@ handleChange = (stateName, id) => (event) => {
   })
 }
 
+handleImageChange = (event) => {
+  if (event.target.files && event.target.files[0]) {
+    let img = event.target.files[0]
+    this.setState({
+      general: [
+        {...this.state.general[0], photo: URL.createObjectURL(img)}
+      ]
+    })
+  }
+}
+
 renderAll = (stateName) => {
   let elements = []
   for (let i = 0; i < this.state[stateName].length ; i++) {
@@ -108,6 +119,7 @@ renderAll = (stateName) => {
           title="Personal Details"
           info={this.state.general[0]}
           handleChange={this.handleChange("general", "0")}
+          handleImageChange={this.handleImageChange}
         />
         {this.renderAll("experience")}
         {this.renderAll("education")}
