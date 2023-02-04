@@ -1,6 +1,20 @@
 import React from "react";
+import PreviewSection from './PreviewSection'
 
 export default class Preview extends React.Component {
+
+    renderAllSections = (propName) => {
+        let elements = []
+        for (let i = 0; i < this.props[propName].length; i++) {
+                elements.push(
+                    <PreviewSection
+                      key={i}
+                      info={this.props[propName][i]}
+                  />
+                  )
+        }
+        return elements
+      }
 
     render() {
         const general = this.props.general
@@ -24,20 +38,10 @@ export default class Preview extends React.Component {
                 <div className="preview--right">
                     <div className="preview--description"> {general.description || "DESCRIPTION"} </div>
                     <div className="preview--experience"> 
-                        <div> Experience </div>
-                        <div>POSITION</div>
-                        <div>COMPANY</div>
-                        <div>LOCATION</div>
-                        <div> FROM </div>
-                        <div> TO</div>
+                        {this.renderAllSections("experience")}
                     </div>
                     <div className="preview--education">
-                        <div> Education </div>
-                        <div>INSTITUION</div>
-                        <div>DEGREE</div>
-                        <div>SUBJECT</div>
-                        <div> FROM </div>
-                        <div> TO</div>
+                        {this.renderAllSections("education")}
                     </div>
                 </div>
 

@@ -126,6 +126,8 @@ renderAll = (stateName) => {
         </div>
         <Preview 
         general={generalDefault}
+        experience={this.state.experience}
+        education={this.state.education}
         />
         </main>
         <footer> Marek Rykaczewski </footer>
