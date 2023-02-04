@@ -7,16 +7,16 @@ export default class Preview extends React.Component {
             <div className="preview">
                 <div className="preview--left">
                     <div className="preview--person"> 
-                        <div> YOUR NAME </div>
-                        <div> YOUR TITLE </div>
-                        <div> PHOTO </div>
+                        <div> {this.props.firstName + " " + this.props.lastName}  </div>
+                        <div> {this.props.title} </div>
+                        <img src="" alt="profile" />
                     </div>
                     <div className="preview--personal-info">  
                         <div> Personal Info </div>
                         <div> Phone </div>
-                        <div> PHONE NO HERE </div>
+                        <div> {this.props.phone} </div>
                         <div> E-mail </div>
-                        <div> EMAIL HERE </div>
+                        <div> {this.props.email} </div>
                     </div>
                 </div>
 

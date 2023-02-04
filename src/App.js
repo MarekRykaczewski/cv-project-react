@@ -72,6 +72,7 @@ handleChange = (stateName, id) => (event) => {
     return item
   })
   console.log(this.state)
+  console.log(this.state.general[0].firstName)
   this.setState({
   [stateName]:
     updated
@@ -97,6 +98,7 @@ renderAll = (stateName) => {
 }
 
   render() {
+    const generalDefault = this.state.general[0]
     return (
       <div className="App">
         <nav> CV Maker </nav>
@@ -110,7 +112,15 @@ renderAll = (stateName) => {
         {this.renderAll("experience")}
         {this.renderAll("education")}
         </div>
-        <Preview />
+        <Preview 
+        firstName={generalDefault.firstName}
+        lastName={generalDefault.lastName}
+        title={generalDefault.title}
+        photo={generalDefault.photo}
+        email={generalDefault.email}
+        phone={generalDefault.phone}
+        description={generalDefault.description}
+        />
         </main>
         <footer> Marek Rykaczewski </footer>
       </div>
