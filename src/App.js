@@ -7,7 +7,8 @@ import Preview from './components/Preview';
 export default class App extends React.Component {
 
   STATE_TEMPLATE = {
-    general: {
+    general: [{
+      id: "0",
       firstName: "",
       lastName: "",
       title: "",
@@ -15,7 +16,7 @@ export default class App extends React.Component {
       email: "",
       phone: "",
       description: ""
-    },
+    }],
     experience: [{
       id: "",
       position: "",
@@ -35,9 +36,9 @@ export default class App extends React.Component {
   }
 
   state = {
-    general: {
-      ...[this.STATE_TEMPLATE.general][0]
-    },
+    general: [{
+      ...this.STATE_TEMPLATE.general[0]
+    }],
     experience: [{
       ...this.STATE_TEMPLATE.experience[0], id: uniqid()
     }],
@@ -103,7 +104,8 @@ renderAll = (stateName) => {
         <div className='main--left'>
         <FormSection 
           title="Personal Details"
-          info={this.state.general}
+          info={this.state.general[0]}
+          handleChange={this.handleChange("general", "0")}
         />
         {this.renderAll("experience")}
         {this.renderAll("education")}
