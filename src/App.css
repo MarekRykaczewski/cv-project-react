@@ -21,9 +21,59 @@ main {
 }
 
 .preview {
+    font-family: Arial, Helvetica, sans-serif;
     border: 1px solid black;
-    min-width: 700px;
-    min-height: 900px;
+    min-width: 800px;
+    min-height: 1000px;
+    max-width: 800px;
+    max-height: 1000px;
+    display: grid;
+    grid-template-columns: 300px auto;
+    grid-template-rows: 1fr;
+    position: relative;
+}
+
+.preview--left {
+    position: relative;
+    background-color: rgb(39, 36, 57);
+    height: 100%;
+    width: auto;
+    color: white;
+    grid-column: 1;
+    grid-row: 1;
+    display: grid;
+    grid-template-rows: 300px;
+}
+
+.preview--person {
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 20px 20px 20px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.preview--personal-info {
+    padding: 20px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.preview--right {
+    display: grid;
+    grid-template-rows: 150px;
+}
+
+.preview--description {
+    padding: 20px;
+}
+
+.preview--experience {
+    padding: 20px;
+}
+
+.preview--education {
+    padding: 20px;
 }
 
 .main--left {
