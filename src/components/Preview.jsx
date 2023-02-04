@@ -22,9 +22,7 @@ export default class Preview extends React.Component {
                 </div>
 
                 <div className="preview--right">
-                    <div className="preview--description">
-                        <div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio necessitatibus illo voluptatum atque ex! Ab laborum tenetur provident aliquam maxime, adipisci fuga eos nam laboriosam?</div>
-                    </div>
+                    <div className="preview--description"> {general.description || "DESCRIPTION"} </div>
                     <div className="preview--experience"> 
                         <div> Experience </div>
                         <div>POSITION</div>
