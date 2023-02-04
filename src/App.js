@@ -100,7 +100,7 @@ renderAll = (stateName) => {
       <div className="App">
         <nav> CV Maker </nav>
         <main> 
-        <div>
+        <div className='main--left'>
         <FormSection 
           title="Personal Details"
           info={this.state.general}
