@@ -87,6 +87,7 @@ handleImageChange = (event) => {
         {...this.state.general[0], photo: URL.createObjectURL(img)}
       ]
     })
+    document.getElementsByClassName("input-file")[0].style.backgroundColor = "rgb(2, 190, 49)"
   }
 }
 
