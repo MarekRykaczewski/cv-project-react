@@ -75,12 +75,27 @@ main {
     padding: 20px;
 }
 
-.preview--experience {
+.preview--section {
     padding: 20px;
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-template-rows: 20px 20px;
 }
 
-.preview--education {
-    padding: 20px;
+.preview--section--title {
+    grid-column: 2;
+    font-weight: bold;
+}
+
+.preview--section--job {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.preview--section--dates {
+    grid-column: 1;
+    grid-row: 1 / 2;
+    font-size: 14px;
 }
 
 .main--left {
