@@ -83,6 +83,7 @@ input[type="file"] {
 
 label {
     font-size: 14px;
+    vertical-align: middle;
 }
 
 .form-section > button {
