@@ -23,7 +23,7 @@ export default class Preview extends React.Component {
     render() {
         const general = this.props.general
         return (
-            <div>
+            <div className="main--right">
                 <button onClick={this.exportPreview}> Export to PDF </button>
             <div id="section-to-print" className="preview">
                 <div className="preview--left">

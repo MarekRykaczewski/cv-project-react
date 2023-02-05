@@ -191,6 +191,29 @@ footer {
     line-height: 20px;
   }
 
+  .main--right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .main--right > button {
+    align-self: center;
+    width: 150px;
+    height: 30px;
+    background-color: rgb(2, 190, 49);
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    height: 35px;
+    outline: 0;
+    text-align: center;
+  }
+
   @media print {
     html, body {
         height: 100%;
