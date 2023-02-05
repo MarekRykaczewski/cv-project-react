@@ -93,6 +93,11 @@ main {
     flex-direction: column;
 }
 
+.preview--right--title {
+    padding: 20px;
+    font-weight: bold;
+}
+
 .preview--description {
     padding: 20px;
 }
