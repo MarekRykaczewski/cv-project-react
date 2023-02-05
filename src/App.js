@@ -120,6 +120,7 @@ renderAll = (stateName) => {
           info={this.state.general[0]}
           handleChange={this.handleChange("general", "0")}
           handleImageChange={this.handleImageChange}
+          allowMultiple={false}
         />
         {this.renderAll("experience")}
         {this.renderAll("education")}
