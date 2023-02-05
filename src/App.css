@@ -40,6 +40,39 @@ footer {
     width: 500px;
 }
 
+.form-section > h3 {
+    margin: 5px;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.form-section > input {
+    background-color: #303245;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: white;
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%;
+}
+
+.form-section > button {
+    background-color: #08d;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 35px;
+    outline: 0;
+    text-align: center;
+    width: 100%;
+  }
+
 .preview {
     font-family: Arial, Helvetica, sans-serif;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -147,6 +180,9 @@ footer {
 }
 
 .main--left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     font-family: Arial, Helvetica, sans-serif;
     max-width: 600px;
     padding: 20px;
@@ -154,34 +190,8 @@ footer {
     background-color: #15172b;
     border-radius: 10px;
     color: white;
-}
 
-.form-section > input {
-    background-color: #303245;
-    border-radius: 12px;
-    border: 0;
-    box-sizing: border-box;
-    color: white;
-    font-size: 18px;
-    height: 100%;
-    outline: 0;
-    padding: 4px 20px 0;
-    width: 100%;
 }
-
-.form-section > button {
-    background-color: #08d;
-    border-radius: 12px;
-    border: 0;
-    box-sizing: border-box;
-    color: #eee;
-    cursor: pointer;
-    font-size: 18px;
-    height: 35px;
-    outline: 0;
-    text-align: center;
-    width: 100%;
-  }
 
   ::placeholder {
     color: rgb(134, 138, 147);
