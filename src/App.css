@@ -50,8 +50,6 @@ footer {
     display: grid;
     grid-template-columns: 300px auto;
     grid-template-rows: 1fr;
-    position: sticky;
-    top: 50px;
 }
 
 .preview--left {
@@ -193,12 +191,15 @@ footer {
 
   .main--right {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 20px;
+    position: sticky;
+    top: 50px;
   }
 
   .main--right > button {
-    align-self: center;
+    align-self: flex-start;
+    justify-self: center;
     width: 150px;
     height: 30px;
     background-color: rgb(2, 190, 49);
