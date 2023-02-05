@@ -113,7 +113,7 @@ renderAll = (stateName) => {
     const generalDefault = this.state.general[0]
     return (
       <div className="App">
-        <nav> CV Maker </nav>
+        <nav> <span> CV Maker </span> </nav>
         <main> 
         <div className='main--left'>
         <FormSection 
@@ -132,7 +132,7 @@ renderAll = (stateName) => {
         education={this.state.education}
         />
         </main>
-        <footer> Marek Rykaczewski </footer>
+        <footer> <span> Marek Rykaczewski </span> </footer>
       </div>
     )
   }
