@@ -64,7 +64,7 @@ footer > span {
     font-size: 1.3rem;
 }
 
-.form-section > input {
+.form-section > input, .input-file {
     background-color: #303245;
     border-radius: 12px;
     border: 0;
@@ -75,6 +75,10 @@ footer > span {
     outline: 0;
     padding: 4px 20px 0;
     width: 100%;
+}
+
+input[type="file"] {
+    display: none;
 }
 
 .form-section > button {

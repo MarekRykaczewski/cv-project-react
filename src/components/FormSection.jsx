@@ -7,7 +7,10 @@ export default class FormSection extends React.Component {
             if (!(prop === "id")) {
                 if (prop === "photo") {
                     return (
-                        <input type="file" name={prop} onChange={this.props.handleImageChange} placeholder={prop} key={i}></input>
+                        <div key={i} className="input-file" >
+                        <input id="upload-photo" type="file" name={prop} onChange={this.props.handleImageChange} placeholder={prop}></input>
+                        <label htmlFor="upload-photo">Browse...</label>
+                        </div>
                     )
                 } else {
                     return (
