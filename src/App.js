@@ -96,6 +96,7 @@ renderAll = (stateName) => {
       elements.push(
         <FormSection
         key={this.state[stateName][i].id} // !!! This lets props update on state change !!!
+        index={i}
         title={stateName}
         info={this.state[stateName][i]}
         allowMultiple={true}
