@@ -24,7 +24,7 @@ export default class FormSection extends React.Component {
 
         return (
             <div className="form-section">
-                <h3> {this.props.title} </h3>
+                <h3> {this.props.title.toUpperCase()} </h3>
                 {formElements}
                 {this.props.allowMultiple && <button onClick={this.props.handleAddClick}> Add </button>}
                 {this.props.allowMultiple && this.props.index !== 0 && <button onClick={this.props.handleDeleteClick}> Delete </button>}
