@@ -34,23 +34,35 @@ main {
 }
 
 .preview--left {
-    position: relative;
     background-color: rgb(39, 36, 57);
-    height: 100%;
-    width: auto;
     color: white;
     grid-column: 1;
     grid-row: 1;
     display: grid;
-    grid-template-rows: 300px;
+    grid-template-rows: 300px auto;
+    grid-template-columns: 300px;
 }
 
 .preview--person {
     padding: 20px;
     display: grid;
-    grid-template-rows: 30px 30px auto;
-    font-weight: bold;
+    max-width: 260px;
+    grid-template-rows: auto 30px auto;
+    grid-template-columns: 260px;
     font-size: 24px;
+}
+
+.preview--person--name {
+    height: auto;
+    font-weight: bold;
+    font-size: 26px;
+    grid-row: 1;
+    inline-size: 260px;
+    overflow-wrap: break-word;
+}
+
+.preview--person--title {
+    font-size: 18px;
 }
 
 .preview--person--image {
@@ -62,13 +74,23 @@ main {
 
 .preview--personal-info {
     padding: 20px;
-    font-weight: bold;
     font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.preview--personal-info--title {
+    font-weight: bold;
+}
+
+.preview--personal-info--subtitle {
+    font-weight: bold;
 }
 
 .preview--right {
-    display: grid;
-    grid-template-rows: 150px;
+    display: flex;
+    flex-direction: column;
 }
 
 .preview--description {
@@ -78,6 +100,7 @@ main {
 .preview--section {
     padding: 20px;
     display: grid;
+    height: auto;
     grid-template-columns: 100px auto;
     grid-template-rows: 20px 20px;
 }
