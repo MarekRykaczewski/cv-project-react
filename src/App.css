@@ -30,7 +30,8 @@ main {
     display: grid;
     grid-template-columns: 300px auto;
     grid-template-rows: 1fr;
-    position: relative;
+    position: sticky;
+    top: 50px;
 }
 
 .preview--left {
