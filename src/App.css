@@ -190,3 +190,27 @@ footer {
     font-size: 20px;
     line-height: 20px;
   }
+
+  @media print {
+    html, body {
+        height: 100%;
+        width: fit-content;
+        margin: 0 !important; 
+        padding: 0 !important;
+        overflow: hidden;
+    }
+    body * {
+      visibility: hidden;
+    }
+    #section-to-print, #section-to-print * {
+      visibility: visible;
+    }
+    #section-to-print {
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: rgb(221, 155, 0);
+      min-width: 100vw;
+      min-height: 100vh;
+    }
+  }

@@ -16,10 +16,16 @@ export default class Preview extends React.Component {
         return elements
       }
 
+     exportPreview = () => {
+        window.print();
+    }
+
     render() {
         const general = this.props.general
         return (
-            <div className="preview">
+            <div>
+                <button onClick={this.exportPreview}> Export to PDF </button>
+            <div id="section-to-print" className="preview">
                 <div className="preview--left">
                     <div className="preview--person"> 
                         <div className="preview--person--name"> {general.firstName || "FIRSTNAME"} {general.lastName || "LASTNAME"} </div>
@@ -43,6 +49,7 @@ export default class Preview extends React.Component {
                         {this.renderAllSections("education")}
                 </div>
 
+            </div>
             </div>
         )
     }
